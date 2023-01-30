@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Courses Offered By <%= degreeProgram %>:</title>
+		<link
+			href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<%- include('header'); -%>
+		<div class="p-10">
+			<h1 class="text-3xl font-bold">
+				Courses Offered By <%= degreeProgram %>:
+			</h1>
+			<ul class="list-decimal pl-10 min-h-screen">
+				<% courses.forEach(function(course) { %>
+				<li class="py-2"><%= course %></li>
+				<% }); %>
+			</ul>
+		</div>
+		<%- include('footer'); -%>
+	</body>
+</html>
